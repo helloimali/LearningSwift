@@ -19,6 +19,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var CPUScore: UILabel!
     
+    var leftScore = 0
+    var rightScore = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -30,6 +33,21 @@ class ViewController: UIViewController {
         
         LeftImgView.image = UIImage(named: "card" + String(leftNum))
         RIghtImgView.image = UIImage(named: "card" + String(rightNum))
+        
+        if leftNum > rightNum{
+            leftScore += 1
+            PlayerScore.text = String(leftScore)
+        }
+        else if leftNum < rightNum{
+            rightScore += 1
+            CPUScore.text = String(rightScore)
+
+        }
+        else{
+            
+        }
+        
+        
     }
     
 }
