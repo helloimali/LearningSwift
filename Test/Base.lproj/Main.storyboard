@@ -27,6 +27,9 @@
                                 <state key="normal" title="Sign in with Facebook" backgroundImage="FB">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Vi4-Co-4w7" kind="show" id="xbA-si-pvQ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e70-cf-2KM" userLabel="SecondButton">
                                 <rect key="frame" x="64.5" y="492.5" width="285" height="69"/>
@@ -73,6 +76,74 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="TLh-NK-Yro">
+            <objects>
+                <viewController id="Vi4-Co-4w7" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J23-PT-vja">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="nYI-Il-OkJ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5r-ON-B7D">
+                                <rect key="frame" x="186" y="437" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5DG-np-dLV">
+                                <rect key="frame" x="64.5" y="304.5" width="285" height="287.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick a thing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gW-wj-qQp">
+                                        <rect key="frame" x="0.0" y="0.0" width="285" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pU1-ky-HMp">
+                                        <rect key="frame" x="0.0" y="40.5" width="285" height="69"/>
+                                        <state key="normal" title="Sign In with Facebook" backgroundImage="FB">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0x2-TJ-Y7c">
+                                        <rect key="frame" x="0.0" y="129.5" width="285" height="69"/>
+                                        <state key="normal" title="Sign in with Google" backgroundImage="Google"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kln-XE-pT6">
+                                        <rect key="frame" x="0.0" y="218.5" width="285" height="69"/>
+                                        <state key="normal" title="SIgn in with email" backgroundImage="Email"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Social Squid" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CaU-Sj-Ye3">
+                                <rect key="frame" x="78.5" y="206" width="257.5" height="58.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="49"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5DG-np-dLV" firstAttribute="centerX" secondItem="J23-PT-vja" secondAttribute="centerX" id="3k5-HB-bMd"/>
+                            <constraint firstItem="CaU-Sj-Ye3" firstAttribute="centerX" secondItem="J23-PT-vja" secondAttribute="centerX" id="MQ3-MV-syW"/>
+                            <constraint firstItem="nYI-Il-OkJ" firstAttribute="top" secondItem="J23-PT-vja" secondAttribute="top" id="NcG-3t-Baa"/>
+                            <constraint firstItem="5DG-np-dLV" firstAttribute="centerY" secondItem="J23-PT-vja" secondAttribute="centerY" id="cxv-9d-lgR"/>
+                            <constraint firstItem="nYI-Il-OkJ" firstAttribute="leading" secondItem="J23-PT-vja" secondAttribute="leading" id="kEh-co-91Y"/>
+                            <constraint firstItem="5DG-np-dLV" firstAttribute="top" secondItem="CaU-Sj-Ye3" secondAttribute="bottom" constant="40" id="mbF-cg-F7p"/>
+                            <constraint firstAttribute="bottom" secondItem="nYI-Il-OkJ" secondAttribute="bottom" id="xyJ-cc-TIi"/>
+                            <constraint firstAttribute="trailing" secondItem="nYI-Il-OkJ" secondAttribute="trailing" id="z0y-td-SdH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CgT-gV-tDm"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vdl-fG-dsc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="971.01449275362324" y="129.91071428571428"/>
         </scene>
     </scenes>
     <resources>
