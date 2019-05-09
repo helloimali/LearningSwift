@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="E2V1_UI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Breakfast" translatesAutoresizingMaskIntoConstraints="NO" id="NhN-iU-jak">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TopGradient" translatesAutoresizingMaskIntoConstraints="NO" id="DnO-CD-eff">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="380"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BottomGradient" translatesAutoresizingMaskIntoConstraints="NO" id="ZhR-Nb-Qqh">
+                                <rect key="frame" x="0.0" y="438" width="414" height="298"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Heart_health" translatesAutoresizingMaskIntoConstraints="NO" id="YVS-ju-ups">
+                                <rect key="frame" x="337" y="20" width="47" height="41"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I hate eggs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fte-zL-6CB">
+                                <rect key="frame" x="20" y="30" width="88" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Honestly, do you really like eggs? Probably not. You probably don't like eggs either." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oPn-C5-EGg">
+                                <rect key="frame" x="30" y="611.66666666666663" width="267.66666666666669" height="64.333333333333371"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZhR-Nb-Qqh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2nq-6M-4U9"/>
+                            <constraint firstAttribute="trailing" secondItem="NhN-iU-jak" secondAttribute="trailing" id="9ci-05-yAh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oPn-C5-EGg" secondAttribute="bottom" constant="60" id="CWJ-CR-Co4"/>
+                            <constraint firstItem="oPn-C5-EGg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="CYC-pc-ew8"/>
+                            <constraint firstItem="NhN-iU-jak" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="EdN-sd-ZP3"/>
+                            <constraint firstAttribute="bottom" secondItem="ZhR-Nb-Qqh" secondAttribute="bottom" id="GZh-iB-P0C"/>
+                            <constraint firstAttribute="bottom" secondItem="NhN-iU-jak" secondAttribute="bottom" id="RWa-G6-GwU"/>
+                            <constraint firstItem="DnO-CD-eff" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="UK9-Al-ADT"/>
+                            <constraint firstItem="fte-zL-6CB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Xhq-X1-P48"/>
+                            <constraint firstItem="NhN-iU-jak" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZUJ-bM-jTs"/>
+                            <constraint firstItem="YVS-ju-ups" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fte-zL-6CB" secondAttribute="trailing" constant="8" symbolic="YES" id="Zsg-n1-Orc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="oPn-C5-EGg" secondAttribute="trailing" symbolic="YES" id="a26-Sp-CIt"/>
+                            <constraint firstAttribute="trailing" secondItem="DnO-CD-eff" secondAttribute="trailing" id="dPw-13-Qdx"/>
+                            <constraint firstAttribute="trailing" secondItem="ZhR-Nb-Qqh" secondAttribute="trailing" id="dje-Ev-Wpy"/>
+                            <constraint firstItem="YVS-ju-ups" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gSI-xR-mnh"/>
+                            <constraint firstItem="DnO-CD-eff" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gbr-ks-R4n"/>
+                            <constraint firstItem="ZhR-Nb-Qqh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="m8y-V8-0bM"/>
+                            <constraint firstItem="DnO-CD-eff" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pvw-n2-Xau"/>
+                            <constraint firstItem="fte-zL-6CB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qfa-d7-ejq"/>
+                            <constraint firstAttribute="trailing" secondItem="YVS-ju-ups" secondAttribute="trailing" constant="30" id="uM5-VN-DaB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BottomGradient" width="414" height="298"/>
+        <image name="Breakfast" width="414" height="896"/>
+        <image name="Heart_health" width="47" height="41"/>
+        <image name="TopGradient" width="414" height="380"/>
+    </resources>
+</document>
