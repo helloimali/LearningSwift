@@ -18,20 +18,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="La Flame 🔥" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUZ-a1-1Cb">
-                                <rect key="frame" x="158.5" y="437.5" width="97" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z76-uR-2G5">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="dUZ-a1-1Cb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KXI-YF-w3n"/>
-                            <constraint firstItem="dUZ-a1-1Cb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q4n-b8-tDh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z76-uR-2G5" secondAttribute="trailing" id="DZ8-Hc-isH"/>
+                            <constraint firstItem="Z76-uR-2G5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TaE-08-brA"/>
+                            <constraint firstItem="Z76-uR-2G5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Uea-ab-6xf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Z76-uR-2G5" secondAttribute="bottom" id="dFN-gc-dzY"/>
+                            <constraint firstItem="Z76-uR-2G5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="udY-2o-1U3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="tblJSON" destination="Z76-uR-2G5" id="xy3-mY-8Be"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
