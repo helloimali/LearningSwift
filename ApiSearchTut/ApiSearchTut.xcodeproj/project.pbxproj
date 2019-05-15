@@ -8,21 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		03212FCE228A279E008F2620 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03212FCD228A279E008F2620 /* AppDelegate.swift */; };
-		03212FD0228A279E008F2620 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03212FCF228A279E008F2620 /* ViewController.swift */; };
 		03212FD3228A279E008F2620 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03212FD1228A279E008F2620 /* Main.storyboard */; };
 		03212FD5228A279F008F2620 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03212FD4228A279F008F2620 /* Assets.xcassets */; };
 		03212FD8228A279F008F2620 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03212FD6228A279F008F2620 /* LaunchScreen.storyboard */; };
+		03212FE0228A2B24008F2620 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03212FDF228A2B24008F2620 /* CustomTableViewCell.swift */; };
+		0333FA18228A3083003B2401 /* SearchResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0333FA17228A3083003B2401 /* SearchResultsTableViewController.swift */; };
+		0333FA1A228BC133003B2401 /* APIRequestFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0333FA19228BC133003B2401 /* APIRequestFetcher.swift */; };
 		1E2C7437DA94C374CD127166 /* Pods_ApiSearchTut.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DBE6DBB16742818BEE613F3 /* Pods_ApiSearchTut.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		03212FCA228A279E008F2620 /* ApiSearchTut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApiSearchTut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03212FCD228A279E008F2620 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		03212FCF228A279E008F2620 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		03212FD2228A279E008F2620 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		03212FD4228A279F008F2620 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03212FD7228A279F008F2620 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03212FD9228A279F008F2620 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03212FDF228A2B24008F2620 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		0333FA17228A3083003B2401 /* SearchResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsTableViewController.swift; sourceTree = "<group>"; };
+		0333FA19228BC133003B2401 /* APIRequestFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestFetcher.swift; sourceTree = "<group>"; };
 		5817D7FBC29E751C58892739 /* Pods-ApiSearchTut.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApiSearchTut.release.xcconfig"; path = "Target Support Files/Pods-ApiSearchTut/Pods-ApiSearchTut.release.xcconfig"; sourceTree = "<group>"; };
 		5DBE6DBB16742818BEE613F3 /* Pods_ApiSearchTut.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApiSearchTut.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95C0479D54B2A7766249E769 /* Pods-ApiSearchTut.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApiSearchTut.debug.xcconfig"; path = "Target Support Files/Pods-ApiSearchTut/Pods-ApiSearchTut.debug.xcconfig"; sourceTree = "<group>"; };
@@ -61,12 +65,14 @@
 		03212FCC228A279E008F2620 /* ApiSearchTut */ = {
 			isa = PBXGroup;
 			children = (
+				0333FA19228BC133003B2401 /* APIRequestFetcher.swift */,
 				03212FCD228A279E008F2620 /* AppDelegate.swift */,
-				03212FCF228A279E008F2620 /* ViewController.swift */,
 				03212FD1228A279E008F2620 /* Main.storyboard */,
+				0333FA17228A3083003B2401 /* SearchResultsTableViewController.swift */,
 				03212FD4228A279F008F2620 /* Assets.xcassets */,
 				03212FD6228A279F008F2620 /* LaunchScreen.storyboard */,
 				03212FD9228A279F008F2620 /* Info.plist */,
+				03212FDF228A2B24008F2620 /* CustomTableViewCell.swift */,
 			);
 			path = ApiSearchTut;
 			sourceTree = "<group>";
@@ -85,7 +91,6 @@
 				95C0479D54B2A7766249E769 /* Pods-ApiSearchTut.debug.xcconfig */,
 				5817D7FBC29E751C58892739 /* Pods-ApiSearchTut.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -211,7 +216,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03212FD0228A279E008F2620 /* ViewController.swift in Sources */,
+				0333FA18228A3083003B2401 /* SearchResultsTableViewController.swift in Sources */,
+				03212FE0228A2B24008F2620 /* CustomTableViewCell.swift in Sources */,
+				0333FA1A228BC133003B2401 /* APIRequestFetcher.swift in Sources */,
 				03212FCE228A279E008F2620 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,13 +369,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UF8W267V78;
 				INFOPLIST_FILE = ApiSearchTut/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.malikstudios.ApiSearchTut;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -381,13 +389,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UF8W267V78;
 				INFOPLIST_FILE = ApiSearchTut/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.malikstudios.ApiSearchTut;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
