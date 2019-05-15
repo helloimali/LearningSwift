@@ -12,3 +12,6 @@ When "finish" is hit, information is added to database
 
 when tabe is viewed, pulls data from database.
 when something in the table is clicked, more information is given (like in the search app)
+
+Progress:
+SQL database is created (PersonalDict)
