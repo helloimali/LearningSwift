@@ -1,0 +1,11 @@
+{
+  "name": "personaldict",
+  "version": "1.0.0",
+  "description": "Creating a personal dictionary on an app, with a database and server",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ali Malik",
+  "license": "ISC"
+}
