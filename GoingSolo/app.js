@@ -20,10 +20,6 @@ app.get('/app', function(req,res){
 
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
-app.post('/sendToDB', urlencodedParser, function(req, res) {
-    console.log(req.body.word + req.body.desc);
-    res.end();
-})
 
 //////The next bit will assist in connecting to the database
 
@@ -50,13 +46,37 @@ connection.connect(function(error){
 });
 
 app.get('/', function(req,res){
-    connection.query("SELECT * FROM dict", function(error, rows, fields){
+    
+    res.sendFile(__dirname + "/" + "index.html");
+
+
+})
+
+
+
+app.post('/sendToDB', urlencodedParser, function(req, res) {
+
+    var one = req.body.word;
+    var two = req.body.desc;
+
+    var connectionQuery = "INSERT INTO dict(word,def)VALUES('" + one + "','"+two+"')";
+
+    connection.query(connectionQuery, function(error, rows, fields){
+        
+        // this will return everything from dict
+        // SELECT * FROM dict 
+
+        //This will add "a" and "b" into the "dict" table, into the colms word and def
+        //INSERT INTO dict(word,def)VALUES('A','B')
+
         if(error){
             console.log("error");
         }else{
             console.log("Good");
             console.log(rows)
+
         }
     });
 
+    res.end();
 })
