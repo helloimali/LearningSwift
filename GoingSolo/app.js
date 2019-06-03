@@ -53,6 +53,24 @@ app.get('/', function(req,res){
 })
 
 
+app.get('/returnEntireDB', urlencodedParser, function(req,res){
+    
+    var connectionQuery = "SELECT * FROM dict";
+    
+    connection.query(connectionQuery, function(error,rows,fields){
+        // this will return everything from dict
+
+        if(error){
+            console.log("error");
+        }else{
+            console.log("Good");
+            console.log(rows);
+            res.send(JSON.stringify(rows));
+        }
+    });
+
+
+})
 
 app.post('/sendToDB', urlencodedParser, function(req, res) {
 
@@ -63,9 +81,6 @@ app.post('/sendToDB', urlencodedParser, function(req, res) {
 
     connection.query(connectionQuery, function(error, rows, fields){
         
-        // this will return everything from dict
-        // SELECT * FROM dict 
-
         //This will add "a" and "b" into the "dict" table, into the colms word and def
         //INSERT INTO dict(word,def)VALUES('A','B')
 
