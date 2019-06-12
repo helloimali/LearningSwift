@@ -4,6 +4,7 @@
   "description": "Creating a personal dictionary on an app, with a database and server",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ali Malik",
