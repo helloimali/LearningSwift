@@ -27,11 +27,11 @@ var sql = require('mysql');
 
 var  connection = sql.createConnection({
     //To make a connection you need these credentials/ specifiers
-    host: 'localhost',
-    user: 'root',
-    password: 'password', //yes the password, is password
+    host: 'us-cdbr-iron-east-02.cleardb.net',
+    user: 'b9f0d361207a76',
+    password: 'fb8e5000', //yes the password, at some point, was password - Don't give me that look
     port: 3306,
-    database: 'PersonalDict' // Note, this is the database name, under the "schemas" tab (in SQLWorkbench)
+    database: 'heroku_834120148db6749' // Note, this is the database name, under the "schemas" tab (in SQLWorkbench)
 
 });
 
@@ -55,7 +55,7 @@ app.get('/', function(req,res){
 
 app.get('/returnEntireDB', urlencodedParser, function(req,res){
     
-    var connectionQuery = "SELECT * FROM dict";
+    var connectionQuery = "SELECT * FROM new_table";
     
     connection.query(connectionQuery, function(error,rows,fields){
         // this will return everything from dict
@@ -77,7 +77,9 @@ app.post('/sendToDB', urlencodedParser, function(req, res) {
     var one = req.body.word;
     var two = req.body.desc;
 
-    var connectionQuery = "INSERT INTO dict(word,def)VALUES('" + one + "','"+two+"')";
+    //var connectionQuery = "INSERT INTO new_table(word,def)VALUES('" + one + "','"+two+"')";
+    var connectionQuery = "INSERT INTO `heroku_834120148db6749`.`new_table` (`Name`, `Email`) VALUES ('" + one + "','"+two+"')";
+    
 
     connection.query(connectionQuery, function(error, rows, fields){
         
