@@ -19,3 +19,4 @@ Table is created (dict)
 node.js backend is created and fully connects to the database and table
 node.js backend can succesffully edit the database
 index.html can now send a post reqest that will add the chars to database 
+index.html is now connected to a heroku server 
