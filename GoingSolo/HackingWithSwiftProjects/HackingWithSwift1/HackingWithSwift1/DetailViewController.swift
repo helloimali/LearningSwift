@@ -11,11 +11,15 @@ import UIKit
 class DetailViewController: UIViewController {
     @IBOutlet var imageView: UIImageView!
     var selectedImg: String?
+    var totalPics: Int = 0
+    var indexPic: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = selectedImg
+        title = "Picture " + String(indexPic) + " of " + String(totalPics)
+        //title = selectedImg
+        
         navigationItem.largeTitleDisplayMode = .never
 
         // Do any additional setup after loading the view.
@@ -34,7 +38,10 @@ class DetailViewController: UIViewController {
         navigationController?.hidesBarsOnTap = false
     }
     
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        indexPic = indexPath.row
+        indexPic += 1
+        }
     /*
     // MARK: - Navigation
 

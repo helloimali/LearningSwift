@@ -29,6 +29,24 @@ class ViewController: UITableViewController {
             }
         }
         
+        
+       
+        for i in 0 ..< pictures.count{
+            var min: Int! = i
+            for x in i ..< pictures.count{
+                if pictures[x] < pictures[min] {
+                    min = x
+                }
+            }
+            
+            let temp = pictures[i]
+            pictures[i] = pictures[min]
+            pictures[min] = temp
+        }
+        // or you could have just done this
+        //pictures.sort()
+        
+        
         print(pictures)
     }
 
@@ -45,9 +63,12 @@ class ViewController: UITableViewController {
     }//cellForRowAt
     
     
+    // This func sends data to DetailViewController
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController{
             vc.selectedImg = pictures[indexPath.row]
+            vc.totalPics = pictures.count
+            vc.indexPic = indexPath.row + 1
             navigationController?.pushViewController(vc, animated: true)
         }
         
